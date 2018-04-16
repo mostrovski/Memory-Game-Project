@@ -1,0 +1,279 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: monospace;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+@media only screen and (max-width: 750px) {
+    /* For screens with 750px max width: */
+    .deck {
+        width: 495px;
+        height: 513px;
+        padding: 24px;
+    }
+
+    .deck .card {
+        height: 94px;
+        width: 94px;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    /* For screens with 565px max width: */
+    .deck {
+        width: 371px;
+        height: 384px;
+        padding: 18px;
+    }
+
+    .deck .card {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    /* For screens with 485px max width: */
+    .deck {
+        width: 319px;
+        height: 340px;
+        padding: 16px;
+    }
+
+    .deck .card {
+        height: 62px;
+        width: 62px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    /* For screens with 360px max width: */
+    .deck {
+        width: 295px;
+        height: 320px;
+        padding: 14px;
+    }
+
+    .deck .card {
+        height: 58px;
+        width: 58px;
+    }
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .timer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.score-panel .restart {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+    /* For screens with 750px max width: */
+    .score-panel {
+        width: 290px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+    .score-panel .timer {
+        margin-left: 3%;
+        margin-right: 5%;
+    }
+}
+
+/*
+ * Styles for the modal from 
+ * https://inspirationalpixels.com/tutorials/custom-popup-modal
+ */
+
+/* Outer Area */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.75);
+}
+
+/* Inner Area */
+.popup-inner {
+    max-width:400px;
+    width:90%;
+    padding:40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    /* Background pattern from Subtle Patterns */
+    background: #ffffff url('../img/geometry2.png'); 
+    text-align: center;
+}
+ 
+.summary {
+    width: 50%;
+    margin: auto;
+    padding: 0;
+}
+
+.summary li {
+    list-style: none;
+}
+
+.finalstars {
+    display: flex;
+    width: 45px;
+    margin: auto;
+    padding: 0;
+}
+
+.finalstars li {
+    list-style: none;
+    display: block;
+}
+
+.icon {
+   color: #02ccba;
+   font-size: 3em;
+   margin: 0px;
+   padding: 0px; 
+}
+
+/* Close Modal */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-size: 20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+
+/* Play Again Button */
+.popup-button {
+    color: #FFFFFF;
+    background-color: #02ccba;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px; 
+}
