@@ -186,7 +186,7 @@ h1 {
 }
 
 /*
- * Styles for the modal from 
+ * Styles for the modal from
  * https://inspirationalpixels.com/tutorials/custom-popup-modal
  */
 
@@ -214,10 +214,10 @@ h1 {
     box-shadow:0px 2px 6px rgba(0,0,0,1);
     border-radius:3px;
     /* Background pattern from Subtle Patterns */
-    background: #ffffff url('../img/geometry2.png'); 
+    background: #ffffff url('../img/geometry2.png');
     text-align: center;
 }
- 
+
 .summary {
     width: 50%;
     margin: auto;
@@ -244,7 +244,7 @@ h1 {
    color: #02ccba;
    font-size: 3em;
    margin: 0px;
-   padding: 0px; 
+   padding: 0px;
 }
 
 /* Close Modal */
@@ -275,5 +275,5 @@ h1 {
     text-decoration: none;
     margin: 5px;
     padding: 5px;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
