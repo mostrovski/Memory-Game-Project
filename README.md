@@ -1,5 +1,12 @@
 # Match Pairs, Memory Game Project
 
+- [Intro](#intro-the-game-itself)
+- [User interface](#user-interface)
+- [Implementation](#implementation-of-the-project)
+- [Dependencies](#dependencies-built-with)
+- [Stages of the game](#stages-of-the-game)
+- [Outro](#outro-comments)
+
 ## Intro: the game itself
 
 There are **eight pairs** of cards (**16** cards in total) laid face down. Two
